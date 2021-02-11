@@ -1,0 +1,78 @@
+.MainPage {
+    margin: 12px;
+}
+.MainPage .ProfileImgBox  {
+    padding: 16px;
+    background: #e9e8f0;
+    border-radius: 50%;
+    border: 2px solid #fff;
+
+
+
+background: linear-gradient(145deg, #d5d8dd, #feffff);
+box-shadow:  8px 8px 16px #e6e9ee,
+             -8px -8px 16px #f4f7fc;
+
+                max-height: 420px;
+                max-width: 420px;
+}
+.MainPage .ProfileImgBox img {
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px solid ;
+    width: 100%;
+}
+
+.MainPage {
+
+}
+
+
+
+
+
+.MainPage .LinkBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-radius: 24px;
+    padding: 24px 24px;
+    max-width: 900px;
+    background: #edf0f5;
+    box-shadow:  8px 8px 16px #dfe2e6,
+    -8px -8px 16px #fbfeff;
+
+    margin-bottom: 24px;
+}
+.MainPage .LinkBox .title {
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+        color: #d5586a;
+}
+.MainPage .LinkBox .name {
+    font-size: 26px;
+    font-weight: 400;
+    display: block;
+        /* color: #d5586a; */
+}
+.MainPage .LinkBox .icon i {
+    font-size: 64px;
+    margin-right: 24px;
+        color: #43869c;
+}
+
+
+
+@media (max-width: 768px) { 
+    .MainPage .LinkBox .title {
+    font-size: 16px;
+    }
+    .MainPage .LinkBox .name {
+    font-size: 18px;
+    }
+    .MainPage .LinkBox .icon i {
+    font-size: 44px;
+    margin-right: 16px;
+    }
+}

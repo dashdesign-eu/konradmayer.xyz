@@ -1,0 +1,17 @@
+footer, .Footer {
+    margin-top: 64px;
+    padding: 32px;
+    /* background: rgba(0,0,0,0.01);
+    border-top: 1px solid rgba(0,0,0,0.1); */
+
+    border-radius: 24px 24px 0 0;
+background: #edf0f5;
+box-shadow: inset 8px 8px 16px #dfe2e6,
+            inset -8px -8px 16px #fbfeff;
+}
+footer a {
+    color: #43869c;
+}
+footer p small {
+    color: #d5586a;
+}
