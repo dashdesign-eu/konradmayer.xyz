@@ -15,7 +15,7 @@ function MainPage() {
                         </img>
                     </div>
 
-                    <div className="p-5 col-12">
+                    <div className="p-5 col-12  col-lg-8">
                         <span className="code">var name =</span>
                         <div>
                             <h1>Konrad Mayer</h1>
