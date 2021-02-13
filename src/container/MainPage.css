@@ -1,5 +1,7 @@
 .MainPage {
-    margin: 12px;
+    padding: 16px;
+    padding-top: 64px;
+    background: linear-gradient(167deg, #eef1f6, #eceff4);
 }
 .MainPage .ProfileImgBox  {
     padding: 16px;

@@ -35,6 +35,12 @@ function MainPage() {
                 <h2 style={{ opacity: 0.25 }} className="text-center mb-5">{"</MeineProfile>"}</h2>
             </div>
 
+            <div style={{ marginTop: 128, marginBottom: 128, }} className="container">
+                <h2 className="text-center mb-5">{"<Beschreibung>"}</h2>
+                <p className="text-center">Ich bin <b>{+ _calculateAge(new Date("02.17.2001"))}</b> Jahre alt und komme aus Grünberg, einer Kleinstadt in Mittelhessen.</p>
+                <h2 style={{ opacity: 0.25 }} className="text-center mb-5">{"</Beschreibung>"}</h2>
+            </div>
+
             <div className="container">
                 <span className="code pl-4">{"</"}  <span className="code-component">MeinPortfolio</span> {">"} ); </span>
                 <span className="code">{"} else { "}</span>
@@ -102,4 +108,10 @@ function LinkBox(props) {
             </div>
         </a>
     )
+}
+
+function _calculateAge(birthday) { // birthday is a date
+    var ageDifMs = Date.now() - birthday.getTime();
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
 }

@@ -7,11 +7,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   height: 100vh;
-background: linear-gradient(167deg, #eef1f6, #eceff4);
+
+background: linear-gradient(167deg, #43869c, #d5586a);
 
 font-family: 'Roboto Slab', serif;
 }
-
+.App {
+    padding-top: 16px;
+  background: linear-gradient(90deg, #43869c, #d5586a);
+}
+html {
+background: #eceff4;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
