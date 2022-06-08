@@ -19,11 +19,25 @@ function MainPage() {
                         <span className="code">var name =</span>
                         <div>
                             <h1>Konrad Mayer</h1>
-                            <span className="code">return ( {"<"}  <span className="code-component">MeinPortfolio</span> <span className="code-prop">isCool</span> {">"}</span>
+                            <span className="code">return ( {"<"}  <span className="code-component">MeinPortfolio</span> <span className="code-prop">isSelfmade</span> {">"}</span>
                         </div>
 
                     </div>
                 </div>
+            </div>
+
+            <div className='container mb-5 mt-5 pb-5'>
+                <h2 className="text-center mb-5">{"<AktuelleProjekte>"}</h2>
+
+                <hr />
+
+                <h3>Die Mittelhessen-App</h3>
+                <p>Aktuell arbeite ich mit an der <a href="https://mittelhessen.app/" target="_blank">Mittelhessen-App</a>. Die App soll im Herbs an den Start gehen und alle 101 Kommunen in Mittelhessen zu digitalen Vorreitern machen.</p>
+
+                <hr />
+                <h3>dashdesign;</h3>
+                <p>2020 habe ich das Start-up <a href="https://dashdesign.eu" target="_blank">dashdesign;</a> gegründet und arbeite Vollzeit an diesem.</p>
+                <h2 style={{ opacity: 0.25 }} className="text-center mb-5">{"</AktuelleProjekte>"}</h2>
             </div>
 
             <div className="container mb-5 mt-5">
@@ -49,6 +63,8 @@ function MainPage() {
 
             <Footer />
 
+
+
         </div>
     )
 }
@@ -56,6 +72,12 @@ function MainPage() {
 export default MainPage
 
 const links = [
+    {
+        url: "https://www.linkedin.com/in/konrad-mayer-17a332134/",
+        title: "LinkedIn",
+        name: "Konrad Mayer",
+        icon: <i class="fab fa-linkedin"></i>,
+    },
     {
         url: "https://www.instagram.com/derkonreifen",
         title: "Instagram",
@@ -113,5 +135,5 @@ function LinkBox(props) {
 function _calculateAge(birthday) { // birthday is a date
     var ageDifMs = Date.now() - birthday.getTime();
     var ageDate = new Date(ageDifMs); // miliseconds from epoch
-    return Math.abs(ageDate.getUTCFullYear() - 1970);
+    return Math.abs(ageDate.getUTCFullYear() - 1970) || "21"
 }
