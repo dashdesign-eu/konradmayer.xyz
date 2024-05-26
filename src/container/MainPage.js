@@ -5,7 +5,7 @@ import "./MainPage.css"
 function MainPage() {
     return (
         <div className="MainPage">
-            <div className="container mb-5">
+            <div className="container mb-2">
                 <div className="d-flex row align-items-center">
 
                     <div className="ProfileImgBox col-12 col-lg-4">
@@ -26,8 +26,8 @@ function MainPage() {
 
 
 
-            <div className="container mb-5 mt-5">
-                <h2 className="text-center mb-5">{"Kontaktdaten:"}</h2>
+            <div className="container mb-2 mt-5">
+                <h2 className="text-center mb-2">{"Kontaktdaten:"}</h2>
                 <div className="">
                     {links.map((i, k) =>
                         <LinkBox {...i} key={k} />)}

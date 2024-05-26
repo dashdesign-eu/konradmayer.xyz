@@ -1,6 +1,6 @@
 .MainPage {
+  /* padding: 16px 0; */
   padding: 16px;
-  padding-top: 64px;
   background: linear-gradient(167deg, #eef1f6, #eceff4);
 }
 .MainPage .ProfileImgBox {
@@ -20,10 +20,6 @@
   box-shadow: 0 0 0 1px solid;
   width: 100%;
 }
-
-.MainPage {
-}
-
 .MainPage .LinkBox {
   display: flex;
   flex-direction: row;
