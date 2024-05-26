@@ -50,17 +50,22 @@ export default MainPage
 
 const links = [
     {
-        url: "#",
-        title: "Kontakt Speichern",
-        name: "Konrad Mayer",
-        icon: <i className="fad fa-address-card"></i>,
-        download: true,
-    },
-    {
         url: "https://www.linkedin.com/in/konrad-mayer-17a332134/",
         title: "LinkedIn",
         name: "Konrad Mayer",
         icon: <i class="fab fa-linkedin"></i>,
+    },
+    {
+        url: "tel:4915901427689",
+        title: "Telefon",
+        name: "(+49) 1590 1427689",
+        icon: <i class="fad fa-phone"></i>,
+    },
+    {
+        url: "mailto:konrad.mayer@hessenapp.de",
+        title: "E-Mail",
+        name: "konrad.mayer@hessenapp.de",
+        icon: <i class="fad fa-mailbox"></i>,
     },
     {
         url: "https://www.instagram.com/derkonreifen",
@@ -73,12 +78,6 @@ const links = [
         title: "Mein Unternehmen",
         name: "Hessen App GmbH",
         icon: <i class="fad fa-building"></i>,
-    },
-    {
-        url: "mailto:konrad.mayer@hessenapp.de",
-        title: "E-Mail",
-        name: "konrad.mayer@hessenapp.de",
-        icon: <i class="fad fa-mailbox"></i>,
     },
 ]
 function LinkBox(props) {
