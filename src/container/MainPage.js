@@ -91,14 +91,17 @@ function LinkBox(props) {
     const handleDownload = () => {
         if (props.download) {
             const vCardData = `
-BEGIN:VCARD
-VERSION:3.0
-FN:Konrad Mayer
-N:Mayer;Konrad;;;
-ORG:Hessen App GmbH
-EMAIL:konrad.mayer@hessenapp.de
-URL:https://hessenapp.de
-END:VCARD`;
+            BEGIN:VCARD
+            VERSION:3.0
+            FN:Konrad Mayer
+            N:Mayer;Konrad;;;
+            ORG:Hessen App GmbH
+            EMAIL:konrad.mayer@hessenapp.de
+            TEL:+4915901427689
+            URL:https://hessenapp.de
+            NOTE:Softwareentwickler, App-Entwickler und Webentwickler
+            END:VCARD
+            `;
 
             const blob = new Blob([vCardData], { type: 'text/vcard' });
             const url = URL.createObjectURL(blob);
