@@ -99,7 +99,7 @@ function LinkBox(props) {
             EMAIL:konrad.mayer@hessenapp.de
             TEL:+4915901427689
             URL:https://hessenapp.de
-            NOTE:Softwareentwickler, App-Entwickler und Webentwickler
+            NOTE:Softwareentwickler, App-Entwickler und Webentwickler | Mittelhessen-App
             END:VCARD
             `;
 
