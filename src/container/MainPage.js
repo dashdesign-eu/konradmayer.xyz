@@ -26,19 +26,7 @@ function MainPage() {
                 </div>
             </div>
 
-            <div className='container mb-5 mt-5 pb-5'>
-                <h2 className="text-center mb-5">{"<AktuelleProjekte>"}</h2>
 
-                <hr />
-
-                <h3>Die Mittelhessen-App</h3>
-                <p>Aktuell arbeite ich mit an der <a href="https://mittelhessen.app/" target="_blank">Mittelhessen-App</a>. Die App soll im Herbs an den Start gehen und alle 101 Kommunen in Mittelhessen zu digitalen Vorreitern machen.</p>
-
-                <hr />
-                <h3>dashdesign;</h3>
-                <p>2020 habe ich das Start-up <a href="https://dashdesign.eu" target="_blank">dashdesign;</a> gegründet und arbeite Vollzeit an diesem.</p>
-                <h2 style={{ opacity: 0.25 }} className="text-center mb-5">{"</AktuelleProjekte>"}</h2>
-            </div>
 
             <div className="container mb-5 mt-5">
                 <h2 className="text-center mb-5">{"<MeineProfile>"}</h2>
@@ -49,11 +37,6 @@ function MainPage() {
                 <h2 style={{ opacity: 0.25 }} className="text-center mb-5">{"</MeineProfile>"}</h2>
             </div>
 
-            <div style={{ marginTop: 128, marginBottom: 128, }} className="container">
-                <h2 className="text-center mb-5">{"<Beschreibung>"}</h2>
-                <p className="text-center">Ich bin <b>{+ _calculateAge(new Date("02.17.2001"))}</b> Jahre alt und komme aus Grünberg, einer Kleinstadt in Mittelhessen.</p>
-                <h2 style={{ opacity: 0.25 }} className="text-center mb-5">{"</Beschreibung>"}</h2>
-            </div>
 
             <div className="container">
                 <span className="code pl-4">{"</"}  <span className="code-component">MeinPortfolio</span> {">"} ); </span>
@@ -73,6 +56,13 @@ export default MainPage
 
 const links = [
     {
+        url: "#",
+        title: "Kontakt Speichern",
+        name: "Konrad Mayer",
+        icon: <i className="fad fa-address-card"></i>,
+        download: true,
+    },
+    {
         url: "https://www.linkedin.com/in/konrad-mayer-17a332134/",
         title: "LinkedIn",
         name: "Konrad Mayer",
@@ -85,40 +75,44 @@ const links = [
         icon: <i class="fab fa-instagram"></i>,
     },
     {
-        url: "https://www.xing.com/profile/Konrad_Mayer12/cv",
-        title: "Xing",
-        name: "Konrad Mayer",
-        icon: <i class="fab fa-xing"></i>,
-    },
-    {
-        url: "https://github.com/orgs/dashdesign-eu/people/konipro",
-        title: "GitHub",
-        name: "@konipro",
-        icon: <i class="fab fa-github"></i>,
-    },
-    {
-        url: "https://dashdesign.eu/",
-        title: "Unternehmen",
-        name: "dashdesign e.K.",
+        url: "https://hessenapp.de",
+        title: "Mein Unternehmen",
+        name: "Hessen App GmbH",
         icon: <i class="fad fa-building"></i>,
     },
     {
-        url: "mailto:konrad@dashdesign.eu",
+        url: "mailto:konrad.mayer@hessenapp.de",
         title: "E-Mail",
-        name: "konrad@dashdesign.eu",
+        name: "konrad.mayer@hessenapp.de",
         icon: <i class="fad fa-mailbox"></i>,
     },
-    {
-        url: "",
-        title: "Facebook",
-        name: "Inaktiv",
-        icon: <i class="fab fa-facebook"></i>,
-    }
 ]
-
 function LinkBox(props) {
+    const handleDownload = () => {
+        if (props.download) {
+            const vCardData = `
+BEGIN:VCARD
+VERSION:3.0
+FN:Konrad Mayer
+N:Mayer;Konrad;;;
+ORG:Hessen App GmbH
+EMAIL:konrad.mayer@hessenapp.de
+URL:https://hessenapp.de
+END:VCARD`;
+
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'Konrad_Mayer.vcf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    }
+
     return (
-        <a href={props.url} target="_blank">
+        <a href={props.url} target="_blank" onClick={handleDownload}>
             <div className="LinkBox">
                 <div className="icon">
                     {props.icon}
@@ -132,8 +126,8 @@ function LinkBox(props) {
     )
 }
 
-function _calculateAge(birthday) { // birthday is a date
+function _calculateAge(birthday) {
     var ageDifMs = Date.now() - birthday.getTime();
-    var ageDate = new Date(ageDifMs); // miliseconds from epoch
-    return Math.abs(ageDate.getUTCFullYear() - 1970) || "21"
+    var ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear() - 1970) || "21";
 }
