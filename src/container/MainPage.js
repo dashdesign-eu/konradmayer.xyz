@@ -16,10 +16,8 @@ function MainPage() {
                     </div>
 
                     <div className="p-5 col-12  col-lg-8">
-                        <span className="code">var name =</span>
                         <div>
                             <h1>Konrad Mayer</h1>
-                            <span className="code">return ( {"<"}  <span className="code-component">MeinPortfolio</span> <span className="code-prop">isSelfmade</span> {">"}</span>
                         </div>
 
                     </div>
@@ -29,20 +27,16 @@ function MainPage() {
 
 
             <div className="container mb-5 mt-5">
-                <h2 className="text-center mb-5">{"<MeineProfile>"}</h2>
+                <h2 className="text-center mb-5">{"Kontaktdaten:"}</h2>
                 <div className="">
                     {links.map((i, k) =>
                         <LinkBox {...i} key={k} />)}
                 </div>
-                <h2 style={{ opacity: 0.25 }} className="text-center mb-5">{"</MeineProfile>"}</h2>
+
             </div>
 
 
-            <div className="container">
-                <span className="code pl-4">{"</"}  <span className="code-component">MeinPortfolio</span> {">"} ); </span>
-                <span className="code">{"} else { "}</span>
-                <span className="code">{"return <"}  <span className="code-component">Loader/</span> {">"}</span>
-            </div>
+
 
             <Footer />
 
@@ -99,7 +93,7 @@ function LinkBox(props) {
             EMAIL:konrad.mayer@hessenapp.de
             TEL:+4915901427689
             URL:https://hessenapp.de
-            NOTE:Softwareentwickler, App-Entwickler und Webentwickler | Mittelhessen-App
+            NOTE:Softwareentwickler, App-Entwickler und Webentwickler | Mittelhessen-App | Krasser Typ, da muss ich mal investieren!! ;) 
             END:VCARD
             `;
 
